@@ -1,0 +1,291 @@
+html {
+  color: seashell;
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 620px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* header */
+header {
+  display: flex;
+  background-color: black;
+  height: 75px;
+  width: 100%;
+  align-items: center;
+  font-size: 22px;
+  color: seashell;
+  font-family: Helvetica;
+  border-bottom: 1px solid seashell;
+}
+
+.logo {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+img {
+  width: 150px;
+}
+
+a:link {
+  color: seashell;
+}
+
+a:visited {
+  color: seashell;
+}
+
+.hnav {
+  color: seashell;
+  padding-right: 20px;
+}
+
+span.nav {
+  margin-right: 25px;
+  text-align: right;
+}
+
+/*Mobile button  */
+#mobile-btn {
+  display: none;
+}
+
+/*Mobile header formatting  */
+@media only screen and (max-width: 622px) {
+  .desktop {
+    display: none;
+  }
+  #mobile-btn {
+    display: inline-block;
+    border: 2px solid seashell;
+    color: seashell;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    background-color: black;
+    transition: background-color 1s ease-in;
+  }
+  
+  #mobile-btn:hover {
+    background-color: gray;
+  }
+
+  /*drop down button formatting */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;  /* allows menu to open to the left */
+    background-color: gray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+    line-height: 2;
+    padding-left: .5rem;
+  }
+  /* Allows for hovering  */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
+}
+
+
+
+/*banner section  */
+
+/*Background formatting  */
+.banner {
+  height: 700px;
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+/*Text formatting  */
+.mission {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  
+}
+
+.mission h2,.mission h4 {
+  width: 100%;
+  text-align: center;
+  margin: 0rem auto;
+  padding: .5rem 0;
+  background-color: black;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+@media only screen and (max-width: 620px) {
+  .mission h2,.mission h4{
+    font-size: 18px;
+  }
+
+}
+
+/*Tea of the month  */
+.tom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-products {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  margin: 10px 20px;
+  
+}
+
+.products img {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.tomstatement {
+  text-align: center;
+}
+
+/*Tea of Month Mobile formatting  */
+
+@media only screen and (max-width: 620px) {
+  .flex-products {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .products{
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+
+/* Locations  */
+
+.locations {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-locations-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 500px;
+  padding-top: 70px;
+}
+
+.flex-container {
+  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.location {
+  opacity: 1.0;
+  padding: 10px;
+  margin: 5px 20px;
+  background-color: black;
+  flex-basis: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-links {
+  display: none;
+}
+
+@media only screen and (max-width: 1060px) {
+  .locations {
+    font-size: 16px;
+  }
+
+  .mobile-links a:link, .mobile-links a:visited {
+    text-decoration: none;
+  }
+
+  .mobile-links a:hover {
+    text-decoration: underline;
+  }
+
+  .mobile-links {
+    display: block;
+    font-size: 3rem;
+  }
+
+  .flex-container {
+    width: 100%;
+    line-height: .5;
+    height: 100%;
+  }
+
+  .location {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .locations {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+  }  
+}
+
+/* Contact Section */
+
+#contact {
+  height: 200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer Section */
+
+footer {
+  text-align: left;
+  padding-left: 20px;
